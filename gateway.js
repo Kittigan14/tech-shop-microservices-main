@@ -1,7 +1,5 @@
     const express = require('express');
-    const {
-        createProxyMiddleware
-    } = require('http-proxy-middleware');
+    const {createProxyMiddleware} = require('http-proxy-middleware');
     const path = require('path');
     const session = require('express-session');
     const axios = require('axios');
@@ -414,5 +412,9 @@
     const PORT = process.env.PORT || 3000;
     app.listen(PORT, () => {
         console.log(`🌐 API Gateway running on port ${PORT}`);
-        open.default(`http://localhost:${PORT}`);
+        // Replace the line with:
+        (async () => {
+            const { default: open } = await import('open');
+            await open(`http://localhost:${PORT}`);
+        })();
     });

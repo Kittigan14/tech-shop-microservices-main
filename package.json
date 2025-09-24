@@ -10,8 +10,7 @@
     "payment": "node payment-service.js",
     "gateway": "node gateway.js",
     "dev": "concurrently \"npm run product\" \"npm run user\" \"npm run order\" \"npm run payment\" \"npm run gateway\""
-  }
-,
+  },
   "keywords": [
     "microservices",
     "nodejs",
@@ -30,7 +29,7 @@
     "express-session": "^1.17.3",
     "http-proxy-middleware": "^2.0.6",
     "jsonwebtoken": "^9.0.2",
-    "open": "^10.2.0",
+    "open": "^8.4.2",
     "uuid": "^9.0.1"
   },
   "devDependencies": {
